@@ -102,7 +102,7 @@ async def _(event):
     thumb = None
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
-    await event.edit("Rename & Upload in process 🙄🙇‍♂️🙇‍♂️🙇‍♀️ It might take some time if file size is big")
+    await event.edit("Rename & Upload in process... \nIt might take some time if file size is big")
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -150,7 +150,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Rename & Upload as Streamable in process 🙄🙇‍♂️🙇‍♂️🙇‍♀️ It might take some time if file size is big")
+    await event.edit("Rename & Upload as Streamable in process... \nIt might take some time if file size is big")
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
