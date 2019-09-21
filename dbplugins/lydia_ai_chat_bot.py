@@ -1,8 +1,8 @@
 """Lydia AI plugin for @UniBorg
 
-.enacf <as a reply to user's message //Turns AI on For that user.
-.delcf <as a reply to user's message //Turns AI off For that user.
-.lstcf // Outputs List Of Currently added Users in AI Auto-Chat.
+.startlydia <as a reply to user's message //Turns AI on For that user.
+.stoplydia <as a reply to user's message //Turns AI off For that user.
+.listlydia // Outputs List Of Currently added Users in AI Auto-Chat.
 
 Description: A module that Act as a chatbot and chat with a User/other Bot.
 This Module Needs CoffeeHouse API to work. so Join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions.
@@ -28,7 +28,7 @@ if Config.LYDIA_API is not None:
     api_client = cf.API(api_key)
 
 
-@borg.on(admin_cmd(pattern="(ena|del|lst)cf", allow_sudo=True))
+@borg.on(admin_cmd(pattern="(start|stop|list)lydia", allow_sudo=True))
 async def lydia_disable_enable(event):
     if event.fwd_from:
         return
@@ -41,15 +41,15 @@ async def lydia_disable_enable(event):
         user_id = reply_msg.from_id
         chat_id = event.chat_id
         await event.edit("Processing...")
-        if input_str == "ena":
+        if input_str == "start":
             session = api_client.create_session()
             logger.info(session)
             logger.info(add_s(user_id, chat_id, session.id, session.expires))
             await event.edit(f"Lydia AI turned on for [user](tg://user?id={user_id}) in chat: `{chat_id}`")
-        elif input_str == "del":
+        elif input_str == "stop":
             logger.info(remove_s(user_id, chat_id))
             await event.edit(f"Lydia AI turned off for [user](tg://user?id={user_id}) in chat: `{chat_id}`")
-        elif input_str == "lst":
+        elif input_str == "list":
             lsts = get_all_s()
             if len(lsts) > 0:
                 output_str = "Lydia AI enabled users:\n\n"
