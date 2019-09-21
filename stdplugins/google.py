@@ -111,7 +111,7 @@ async def _(event):
             request_url = SEARCH_URL.format(BASE_URL, previous_message_text)
             google_rs_response = requests.get(request_url, allow_redirects=False)
             the_location = google_rs_response.headers.get("Location")
-        await event.edit("Found Google Result. Pouring some soup on it!")
+        await event.edit("Found Google Result! \nPlease wait...")
         headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0"
         }
@@ -128,7 +128,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         OUTPUT_STR = """{img_size}
-**Possible Related Search**: <a href="{prs_url}">{prs_text}</a>
+<b>Possible Related Search</b>: <a href="{prs_url}">{prs_text}</a>
 
-More Info: Open this <a href="{the_location}">Link</a> in {ms} seconds""".format(**locals())
+More Info: Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
     await event.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
