@@ -2,7 +2,9 @@
 Available Commands:
 .kangsticker [Optional Emoji]
 .packinfo
-.getsticker"""
+.getsticker
+MODIFIED FOR PERSONAL USE. DO NOT COPY
+"""
 from telethon import events
 from io import BytesIO
 from PIL import Image
@@ -44,8 +46,8 @@ async def _(event):
 
     me = borg.me
     userid = event.from_id
-    packname = f"{userid}'s @UniBorg Pack"
-    packshortname = f"Uni_Borg_{userid}"  # format: Uni_Borg_userid
+    packname = f"@Deonnn's UniBorg Pack"
+    packshortname = f"UniborgDeonnn"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@UniBorg_Sticker.png"
@@ -54,8 +56,8 @@ async def _(event):
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"{userid}'s @AnimatedStickersGroup"
-        packshortname = f"Uni_Borg_{userid}_as"  # format: Uni_Borg_userid
+        packname = f"@Deonnn's UniBorg Animated Pack"
+        packshortname = f"UniborgDeonnn_as"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -175,7 +177,7 @@ async def _(event):
             return
         is_a_s = is_it_animated_sticker(reply_message)
         file_ext_ns_ion = "webp"
-        file_caption = "https://t.me/RoseSupport/33801"
+        file_caption = "Here it is!"
         if is_a_s:
             file_ext_ns_ion = "tgs"
             file_caption = "Forward the ZIP file to @AnimatedStickersRoBot to get lottIE JSON containing the vector information."
