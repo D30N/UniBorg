@@ -122,7 +122,7 @@ async def on_afk(event):
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = f"Deonnn is offline now." + \
-            f"\n**Reason:** {reason}" \
+            f"\n**Reason:** `{reason}`" \
             if reason \
             else f"Hey! I'm offline now.\nI will reply to your message ASAP. So please don't spam my PM.\nThank you!"
         msg = await event.reply(message_to_reply)
