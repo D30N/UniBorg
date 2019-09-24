@@ -128,7 +128,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         OUTPUT_STR = """{img_size}
-<b>Possible Related Search</b>: <a href="{prs_url}">{prs_text}</a>
+<b>Possible Related Search:</b> <a href="{prs_url}">{prs_text}</a>
 
-Similar images: Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
+<b>Similar Images:</b> Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
     await event.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
