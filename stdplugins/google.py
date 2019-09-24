@@ -88,7 +88,7 @@ async def _(event):
     BASE_URL = "http://www.google.com"
     OUTPUT_STR = "Reply to an image to do Google Reverse Search"
     if event.reply_to_msg_id:
-        await event.edit("Pre Processing Media")
+        await event.edit("Pre processing media")
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         if previous_message.media:
@@ -128,7 +128,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         OUTPUT_STR = """{img_size}
-<b>Possible Related Search</b>: <a href="{prs_url}">{prs_text}</a>
+<b>Possible related search:</b> <a href="{prs_url}">{prs_text}</a>
 
-More Info: Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
+<b>Similar images:</b> Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
     await event.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
