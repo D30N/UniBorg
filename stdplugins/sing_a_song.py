@@ -28,7 +28,7 @@ async def _(event):
 
     await event.edit("Singing...")
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(2)
 
     x=(random.randrange(1,11))
 
