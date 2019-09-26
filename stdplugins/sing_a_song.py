@@ -30,7 +30,7 @@ async def _(event):
 
     await asyncio.sleep(2)
 
-    x=(random.randrange(1,11))
+    x=(random.randrange(1,33))
 
     if x==1:
 
