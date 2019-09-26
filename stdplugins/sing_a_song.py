@@ -1,4 +1,10 @@
-# BY @STARKTM1
+""" Sing a Malayalam song... 
+    Command .sing 
+    By @Deonnn """
+
+
+
+# BY @Deonnn
 
 from telethon import events
 
