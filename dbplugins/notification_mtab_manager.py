@@ -6,7 +6,7 @@ Available Commands:
 
 .blockpm
 
-.listapprovedpms"""
+.list approved pms"""
 
 import asyncio
 
@@ -178,7 +178,7 @@ async def approve_p_m(event):
 
 
 
-@borg.on(admin_cmd("listapprovedpms"))
+@borg.on(admin_cmd("list approved pms"))
 
 async def approve_p_m(event):
 
