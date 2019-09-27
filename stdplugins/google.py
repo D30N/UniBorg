@@ -130,5 +130,5 @@ async def _(event):
         OUTPUT_STR = """{img_size}
 <b>Possible related search:</b> <a href="{prs_url}">{prs_text}</a>
 
-<b>Similar images:</b> Open <a href="{the_location}">this link</a> \nGot in {ms} seconds""".format(**locals())
+<b>Similar images:</b> Open <a href="{the_location}">this link</a> \nFound in {ms} seconds""".format(**locals())
     await event.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
