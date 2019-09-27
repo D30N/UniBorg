@@ -1,8 +1,8 @@
 """Lydia AI plugin for @UniBorg
 
-.startlydia <as a reply to user's message //Turns AI on For that user.
-.stoplydia <as a reply to user's message //Turns AI off For that user.
-.listlydia // Outputs List Of Currently added Users in AI Auto-Chat.
+.start lydia <as a reply to user's message //Turns AI on For that user.
+.stop lydia <as a reply to user's message //Turns AI off For that user.
+.list lydia // Outputs List Of Currently added Users in AI Auto-Chat.
 
 Description: A module that Act as a chatbot and chat with a User/other Bot.
 This Module Needs CoffeeHouse API to work. so Join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions.
@@ -28,7 +28,7 @@ if Config.LYDIA_API is not None:
     api_client = cf.API(api_key)
 
 
-@borg.on(admin_cmd(pattern="(start|stop|list)lydia", allow_sudo=True))
+@borg.on(admin_cmd(pattern="(start|stop|list) lydia", allow_sudo=True))
 async def lydia_disable_enable(event):
     if event.fwd_from:
         return
@@ -56,7 +56,7 @@ async def lydia_disable_enable(event):
                 for lydia_ai in lsts:
                     output_str += f"[user](tg://user?id={lydia_ai.user_id}) in chat `{lydia_ai.chat_id}`\n"
             else:
-                output_str = "no Lydia AI enabled users / chats. Start by replying `.enacf` to any user in any chat!"
+                output_str = "no Lydia AI enabled users / chats. Start by replying `.start lydia` to any user in any chat!"
             if len(output_str) > Config.MAX_MESSAGE_SIZE_LIMIT:
                 with io.BytesIO(str.encode(output_str)) as out_file:
                     out_file.name = "lydia_ai.text"
