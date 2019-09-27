@@ -1,8 +1,8 @@
 # BY @Deonnn
 """
-Game of Thrones Quotes plugin
+Game of Thrones Thoughts plugin
 by @Deonnn
-command .gotq
+command .gott
 
 """
 
@@ -18,7 +18,7 @@ import random
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.gotq", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.gott", outgoing=True))
 
 async def _(event):
 
