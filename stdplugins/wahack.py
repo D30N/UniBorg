@@ -64,7 +64,7 @@ async def _(event):
 
             "Looking for WhatsApp databases in targeted person...",
 
-            " User online: True\nTelegram access: True\nRead Storage: True ",
+            " User online: `True`\nTelegram access: `True`\nRead Storage: `True`",
 
             "Hacking... 0%\n[░░░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 20s",
 
@@ -88,7 +88,7 @@ async def _(event):
 
             "Hacking... 100%\n[████████████████████]\n`Scanning file...`\nETA: 0m, 00s",
 
-            "Hacking complete!\nUploading file...",
+            "Hacking complete!\n`Uploading file...`",
 
             "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`"
 
