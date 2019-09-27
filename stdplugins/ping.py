@@ -11,4 +11,4 @@ async def _(event):
     await event.edit("Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit("Userbot is running!\nResponse time: `{} ms.`".format(ms))
+    await event.edit("Userbot is running!\n⏱ {} ms.".format(ms))
