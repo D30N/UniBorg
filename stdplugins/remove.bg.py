@@ -13,8 +13,8 @@
 # GNU General Public License for more details.
 #
 """Remove.BG Plugin for @UniBorg
-Syntax: .remove.bg https://link.to/image.extension
-Syntax: .remove.bg as reply to a media"""
+Syntax: .removebg https://link.to/image.extension
+Syntax: .removebg as reply to a media"""
 import asyncio
 from datetime import datetime
 import io
@@ -24,9 +24,9 @@ from telethon import events
 from uniborg.util import progress, admin_cmd
 
 
-@borg.on(admin_cmd(pattern="remove\.bg ?(.*)"))
+@borg.on(admin_cmd(pattern="removebg ?(.*)"))
 async def _(event):
-    HELP_STR = "`.remove.bg` as reply to a media, or give a link as an argument to this command"
+    HELP_STR = "`.removebg` as reply to a media, or give a link as an argument to this command"
     if event.fwd_from:
         return
     if Config.REM_BG_API_KEY is None:
@@ -49,11 +49,11 @@ async def _(event):
             await event.edit(str(e))
             return
         else:
-            await event.edit("sending to RemoveBG")
+            await event.edit("Sending to RemoveBG")
             output_file_name = ReTrieveFile(downloaded_file_name)
             os.remove(downloaded_file_name)
     elif input_str:
-        await event.edit("sending to RemoveBG")
+        await event.edit("Sending to RemoveBG")
         output_file_name = ReTrieveURL(input_str)
     else:
         await event.edit(HELP_STR)
