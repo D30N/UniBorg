@@ -1,6 +1,6 @@
 # BY @Deonnn
 """ Game of Thrones Dialogues That You Can Use In Everyday Situations
- command .gotf
+ command .gotm
  by @Deonnn
 """
 
@@ -16,7 +16,7 @@ import random
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.gotf", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.gotm", outgoing=True))
 
 async def _(event):
 
