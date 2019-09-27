@@ -22,7 +22,7 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    await event.edit("Processing ...")
+    await event.edit("🔎 Searching...")
     # SHOW_DESCRIPTION = False
     input_str = event.pattern_match.group(1) # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
     input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
@@ -37,7 +37,7 @@ async def _(event):
         output_str += " 👉🏻  [{}]({}) \n\n".format(text, url)
     end = datetime.now()
     ms = (end - start).seconds
-    await event.edit("searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str), link_preview=False)
+    await event.edit("Searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str), link_preview=False)
     await asyncio.sleep(5)
     await event.edit("Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
@@ -47,7 +47,7 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    await event.edit("Processing ...")
+    await event.edit("🔎 Searching for images...\nThis may take upto 21 seconds.")
     input_str = event.pattern_match.group(1)
     response = google_images_download.googleimagesdownload()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -75,7 +75,7 @@ async def _(event):
         os.remove(each_file)
     end = datetime.now()
     ms = (end - start).seconds
-    await event.edit("searched Google for {} in {} seconds.".format(input_str, ms), link_preview=False)
+    await event.edit("Searched Google for {} in {} seconds.".format(input_str, ms), link_preview=False)
     await asyncio.sleep(5)
     await event.delete()
 
@@ -88,7 +88,7 @@ async def _(event):
     BASE_URL = "http://www.google.com"
     OUTPUT_STR = "Reply to an image to do Google Reverse Search"
     if event.reply_to_msg_id:
-        await event.edit("Pre processing media")
+        await event.edit("⌛️ Pre-processing media")
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         if previous_message.media:
