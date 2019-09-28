@@ -21,7 +21,7 @@ async def _(event):
         as_document = True
     elif input_str == "text":
         as_text = True
-    await event.edit("Calculating my internet speed. Please wait!")
+    await event.edit("Calculating my internet speed.\nPlease wait...")
     start = datetime.now()
     s = speedtest.Speedtest()
     s.get_best_server()
