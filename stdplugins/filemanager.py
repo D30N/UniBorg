@@ -326,7 +326,7 @@ async def _(event):
 
         return
 
-    await event.edit(f"File renamed `{src}` to `{dst}`")
+    await event.edit(f"🖊 File renamed successfully!\nOld name: `{src}` \nNew name: `{dst}`")
 
 	
 
@@ -402,7 +402,7 @@ async def _(event):
 
         return
 
-    await event.edit(f"File renaming successful!\nOld name: `{src}`\nNew name: `{dst}`")
+    await event.edit(f"🖊 File renamed successfully!\nOld name: `{src}`\nNew name: `{dst}`")
 
         
 
@@ -426,7 +426,7 @@ async def handler(event):
 
      os.remove(pathtofile)
 
-     await event.edit("🗑 File successfully deleted!")
+     await event.edit("🗑 File deleted successfully!")
 
 	 
 
@@ -456,7 +456,7 @@ async def handler(event):
 
      os.remove(pathtofile)
 
-     await event.edit("🗑 File successfully deleted!")
+     await event.edit("🗑 File deleted successfully!")
 
 	 
 
