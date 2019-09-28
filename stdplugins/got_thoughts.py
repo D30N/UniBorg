@@ -106,7 +106,7 @@ async def _(event):
         
     if x==19:
 
-        await event.edit("`\"urn them all!\"`")
+        await event.edit("`\"Burn them all!\"`")
         
     if x==20:
 
