@@ -2,7 +2,7 @@
 
 SLAP Plugin For Userbot
 
-Syntax .slap in reply to any message, or u gonna slap urself.
+Syntax .slap in reply to any message, or u gonna slap urself! 
 
 """
 
