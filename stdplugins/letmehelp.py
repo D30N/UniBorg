@@ -38,7 +38,7 @@ async def _(event):
 
     if response_api:
 
-        await event.edit("Let me **Google** that for you:\n👉 [{}]({})\n`Thank me Later 😉` ".format(input_str,response_api.rstrip()))
+        await event.edit("Let me **Google** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
 
     else:
 
@@ -60,7 +60,7 @@ async def _(event):
 
     if response_api:
 
-        await event.edit("Let me **YouTube** that for you:\n👉 [{}]({})\n`Thank me Later 😉` ".format(input_str,response_api.rstrip()))
+        await event.edit("Let me **YouTube** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
 
     else:
 
