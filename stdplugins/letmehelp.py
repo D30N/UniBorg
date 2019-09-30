@@ -4,9 +4,9 @@ Let me Google / YouTube that for you!
 
 Syntax:
 
- .ggl <search query>
+ .lmg <search query>
 
- .ytb <search query>
+ .lmy <search query>
 
 By @Deonnn 
 
@@ -22,7 +22,7 @@ import json
 
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern="ggl (.*)"))
+@borg.on(admin_cmd(pattern="lmg (.*)"))
 
 async def _(event):
 
@@ -38,13 +38,13 @@ async def _(event):
 
     if response_api:
 
-        await event.edit("Let me **Google** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
+        await event.edit("Let me **Google** that for you:\n\n🔎 [{}]({})\n\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
 
     else:
 
         await event.edit("Something went wrong. Please try again later.")
 
-@borg.on(admin_cmd(pattern="ytb (.*)"))
+@borg.on(admin_cmd(pattern="lmy (.*)"))
 
 async def _(event):
 
@@ -60,7 +60,7 @@ async def _(event):
 
     if response_api:
 
-        await event.edit("Let me **YouTube** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
+        await event.edit("Let me **YouTube** that for you:\n\n🔎 [{}]({})\n\n`Thank me later 😉` ".format(input_str,response_api.rstrip()))
 
     else:
 
