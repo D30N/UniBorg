@@ -34,9 +34,9 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    sample_url = "https://is.gd/create.php?format=simple&url=https://t.me/share/url?url={}".format(input_str.replace(" ","%20"))
+    sample_url = "https://t.me/share/url?url={}".format(input_str.replace(" ","%20"))
 
-    response_api = requests.get(sample_url).text
+    response_api = sample_url
 
     if response_api:
 
@@ -56,9 +56,9 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    sample_url = "https://is.gd/create.php?format=simple&url=https://t.me/share/url?url={}".format(input_str.replace(" ","%20"))
+    sample_url = "https://t.me/share/url?url={}".format(input_str.replace(" ","%20"))
 
-    response_api = requests.get(sample_url).text
+    response_api = sample_url
 
     if response_api:
 
