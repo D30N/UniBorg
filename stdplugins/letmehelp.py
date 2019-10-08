@@ -32,9 +32,9 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    sample_url = "https://da.gd/s?url=http://google.com/search?q={}".format(input_str.replace(" ","+"))
+    sample_url = "http://google.com/search?q={}".format(input_str.replace(" ","+"))
 
-    response_api = requests.get(sample_url).text
+    response_api = sample_url
 
     if response_api:
 
@@ -54,9 +54,9 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    sample_url = "https://da.gd/s?url=https://www.youtube.com/results?search_query={}".format(input_str.replace(" ","+"))
+    sample_url = "https://www.youtube.com/results?search_query={}".format(input_str.replace(" ","+"))
 
-    response_api = requests.get(sample_url).text
+    response_api = sample_url
 
     if response_api:
 
